@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Loan Calculator</title>
+		<link rel="stylesheet" href="monthlyPayment.css">
+		<script src="monthlyPayment.js"></script>
+	</head>
+	<body>
+		<main>
+			<h1>Loan Calculator</h1>
+			<h2>Enter the values below and click "Calculate".</h2>
+		  	<form action="#" id="calculateForm" name="calculateForm">
+				
+				<!--onsubmit="return calculateMonthlyPayment()" method="POST"-->
+				
+				<label for="fullName">Full Name:</label>
+			  	<input type="text" id="fullName" name="fullName" required>
+			  	<span id="fullName_error" class = "blue">*</span>
+				<br>
+
+				<label for="inititalLoanAmount">Initial Loan Amount:</label>
+				<input type="number" id="initialLoanAmount" name="initialLoanAmount" min="0" step=".01" required>
+				<span id="initialLoanAmount_error" class = "blue">*</span>
+				<br>
+				
+				<label for="monthsOfLoan">Number of Months:</label>
+				<input type="number" id="monthsOfLoan" min="0" step=".01" required>
+			  	<span id="monthsOfLoan_error" class = "blue">*</span>
+				<br>
+				
+				<label for="APR">Annual Interest (APR):</label>
+				<input type="number" id="APR" class="bottom_of_group" step=".0001" min="0" max="100" required>
+			  	<span id="APR_error" class = "blue">*</span>
+				<br>
+			  
+				<label for="monthlyPayment">Monthly Payment:</label>
+				<input type="text" id="monthlyPayment" step=".01" disabled="disabled" />
+				<br>
+				
+				<label>&nbsp;</label>
+				<input type="submit" class="input_button input_botton:hover" id="calculate" value="Calculate" onclick="calculateMonthlyPayment();">
+			</form>
+		</main>
+	</body>
+</html>
