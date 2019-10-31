@@ -4,7 +4,8 @@
 h1 {
 	color: #731313;
 	margin-bottom: 1.5em;
-	font-style: oblique;
+	font-family: Times, Serif;
+	font-weight: bolder;
 }
 h2 {
 	color: #731313;
